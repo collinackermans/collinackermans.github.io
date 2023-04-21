@@ -1,0 +1,1851 @@
+/* scenes */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+
+    font-family: 'Bebas Neue';
+
+
+}
+:hover{
+
+
+    transition-duration: 0.2s;
+}
+.scene{
+
+
+display: none;
+width: 100vw;
+height: 100vh;
+position: relative;
+
+
+
+}
+
+
+.scene.active{
+
+display: block;
+
+
+}
+
+
+.scene video{
+
+
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+/* scene 1 "startscherm" */
+#scene1{
+
+background: url("/assets/wereldbol.png");
+background-position: center;
+
+}
+
+.title-wrap-home{
+
+
+text-align: center;
+margin: 0 auto;
+padding-top: 70px;
+
+
+
+}
+
+.title-nederland{
+
+    font-size: 3em;
+    font-family: 'Bebas Neue';
+    color: rgb(255,87,0);
+    padding: 0,200px
+
+    
+}
+
+
+h1{
+    font-size: 7em;
+    font-family: 'Bebas Neue';
+    color: rgb(255,87,0);
+    
+  }
+
+.nederland-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+    bottom: 325px;
+    right: 585px;
+    transform: translate(-50%,-50%);
+}
+
+.nederland{
+
+
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 4;
+    cursor: pointer;
+    width: 65px;
+    height: 80px;
+
+}
+
+.hightlight-nederland{
+
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-nedeland-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    
+}
+
+
+
+@keyframes hightlight-nedeland-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:150px;width:150px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  /* scene 2 "animatie naar voordeur" */
+
+
+  #scene2{
+
+
+    height: 100vh;
+    width: 100vw;
+    
+  }
+
+
+#intro{
+
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+
+}
+
+  
+/* scene 3  voordeur met bel */
+
+
+#scene3{
+
+
+    background: url("/assets/deur.png");
+    background-position: center;
+
+}
+
+
+.bel-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:165px;
+    bottom: 335px;
+    transform: translate(-50%,-50%);
+}
+
+.bel{
+
+    width: 75px;
+    height: 75px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.hightlight-bel{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-bel-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-bel-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  .gesprekIntro{
+
+    width: 313px;
+    height:78px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 100px;
+    left: 50%;
+    align-items: center;
+    background-color:#2D6895 ;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 25px;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+    text-align: center;
+
+
+  }
+
+  .gesprekIntro:hover{
+
+    background-color: #163247;
+  }
+
+
+  .inlevergesprek{
+
+    width: 313px;
+    height:78px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 100px;
+    left: 50%;
+    align-items: center;
+    background-color:#2D6895;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 25px;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+    text-align: center;
+
+
+  }
+
+  .inlevergesprek:hover{
+
+   background-color: #163247;
+
+
+  }
+
+
+  .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 75px;
+    overflow-x: hidden;
+
+
+  }
+
+  .animatie-menu-btn.inleveren{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 82px;
+    overflow-x: hidden;
+
+
+  }
+
+  .animatie-menu-btn.inleveren:hover{
+
+    background-color: #163247;
+
+  }
+
+
+  .werkstuk-btn{
+
+    width: 400px;
+    height:78px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 100px;
+    left: 50%;
+    align-items: center;
+    background-color:#2D6895;
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+    padding: 25px;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+    text-align: center;
+
+
+  }
+
+  .werkstuk-btn:hover{
+
+    background-color: #163247;
+ 
+ 
+   }
+ 
+
+
+
+
+
+
+
+
+
+  #scene4{
+
+    background: url("/assets/scherm\ 8.png");
+    background-position: center;
+
+
+  }
+
+  #scene5{ 
+    background: url("/assets/scherm\ 9.png");
+    background-position: center;
+}
+
+#scene6{ 
+    background: url("/assets/scherm\ 10.png");
+    background-position: center;
+}
+#scene7{ 
+    background: url("/assets/scherm\ 11.png");
+    background-position: center;
+}
+#scene8{ 
+    background: url("/assets/scherm\ 12.png");
+    background-position: center;
+}
+#scene9{ 
+    background: url("/assets/scherm\ 13.png");
+    background-position: center;
+}
+#scene10{ 
+    background: url("/assets/scherm\ 14.png");
+    background-position: center;
+}
+#scene11{ 
+    background: url("/assets/scherm\ 15.png");
+    background-position: center;
+}
+#scene12{ 
+    background: url("/assets/scherm\ 17.png");
+    background-position: center;
+}
+#scene13{ 
+    background: url("/assets/scherm\ 18.png");
+    background-position: center;
+}
+
+
+#scene14{ 
+    background: url("/assets/menu.png");
+    background-position: center;
+}
+
+
+#scene15{ 
+    background: url("/assets/scene15.png");
+    background-position: center;
+}
+#scene16{ 
+    background: url("/assets/scene16.png");
+    background-position: center;
+}
+
+
+#scene17{ 
+    background: url("/assets/scene17.png");
+    background-position: center;
+}
+
+#scene18{ 
+    background: url("/assets/scene18.png");
+    background-position: center;
+}
+
+
+.hidden{
+
+    display: none;
+}
+
+
+h2{
+
+
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-top: 74px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+
+}
+
+.menu-wrapper{
+
+    
+    margin-top: 278px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+.menu-btn{
+
+
+    width: 600px;
+    height: 100px ;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 36px;
+    font-family: 'Bebas Neue';
+    color: orange;
+    cursor: pointer;
+}
+
+
+.menu-btn:hover{
+
+    background-color: orange;
+    color: white;
+    transition-duration: 0.2s;
+    
+
+}
+
+
+.einde-btn{
+
+    width: 208px;
+    height: 78px ;
+    padding: 25px;
+    background-color: #2D6895;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    position: absolute;
+    color: white;
+    bottom: 100px;
+    right: 100px;
+    font-family: 'Bebas Neue';
+    cursor: pointer;
+
+}
+
+.einde-btn:hover{
+
+    background-color: #163247;
+    transition-duration: 0.2s;
+
+}
+
+
+
+/* <!-- SCHAALVERGROTING STORYLINE --> */
+
+#schaalvergroting-keuze{
+
+    background: url("/assets/keuze-opa-oma.png");
+    background-position: center;
+   
+    
+
+}
+
+#opa-oma-wrapper-schaalvergroting{
+
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 350px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    
+
+
+}
+#opa-schaalvergroting{
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+   
+}
+
+
+#oma-schaalvergroting{
+
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+#oma-schaalvergroting:hover{
+
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+    border-radius: 50px; 
+    transition-duration: 0.2s;
+}
+
+
+#opa-schaalvergroting:hover{
+
+    box-shadow: 0 0 91px rgba(255,255,255); 
+    border-radius: 50px; 
+    transition-duration: 0.2s;
+}
+
+#schaalvergroting-keuze-oma{
+    background: url("/assets/schaalvergroting-oma.png");
+    background-position: center;
+
+}
+
+#schaalvergroting-keuze-opa{
+    background: url("/assets/schaalvergroting-opa.png");
+    background-position: center;
+
+}
+
+.btn-wrapper-verhaal{
+
+
+    position: absolute;
+    bottom: 65px;
+    right: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.btn-wrapper-verhaal-opa{
+
+
+    position: absolute;
+    bottom: 65px;
+    left: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+.keuze-opa-oma-btn{
+
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+
+}
+
+button{
+
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+button:hover{
+    
+    background-color:#163247;
+    transition-duration: 0.2s;
+
+}
+
+#extra-infro-schaalvergroting-opa{
+
+    background: url("/assets/schaalvergroting-extrainfo-opa.png");
+    background-position: center;
+
+}
+
+#extra-infro-schaalvergroting-oma{
+
+    background: url("/assets/schaalvergroting-extrainfo-oma.png");
+    background-position: center;
+}
+
+.afstandsbediening-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:40%;
+    bottom:30px;
+    transform: translate(-50%,-50%);
+}
+
+.afstandsbediening{
+
+    width: 200px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+.hightlight-afstandsbediening{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-afstandsbediening-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-afstandsbediening-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #schaalvergroting-animatie{
+
+    background: url("/assets/schaalvergroting-animatie.png");
+    background-position: center;
+  }
+
+  /* .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    overflow-x: hidden;
+
+
+  } */
+
+
+  .aanknop-afstandsbediening-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    left:25%;
+    top:490px;
+    transform: translate(-50%,-50%);
+}
+
+  .aanknop-afstandsbediening{
+
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.hightlight-aanknop-afstandsbediening{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-aanknop-afstandsbediening-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-aanknop-afstandsbediening-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #schaalvergroting-filmpje{
+
+    position: absolute;
+    width: 910px;
+    height: 600px;
+    left: 700px;
+    top: 245px;
+
+  }
+
+
+
+/* EINDE SCHAALVERGROTING STORYLINE */
+
+
+/* EUROPESE UNIE STORYLINE */
+
+#europa-keuze{
+
+    background: url("/assets/keuze-opa-oma.png");
+    background-position: center;
+   
+    
+
+}
+
+#opa-oma-wrapper-europa{
+
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 350px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    
+
+
+}
+#opa-europa{
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+   
+}
+
+
+#oma-europa{
+
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+#oma-europa:hover{
+
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+    border-radius: 50px; 
+    transition-duration: 0.2s;
+}
+
+
+#opa-europa:hover{
+
+    box-shadow: 0 0 91px rgba(255,255,255); 
+    border-radius: 50px; 
+    transition-duration: 0.2s;
+}
+
+#europa-keuze-oma{
+    background: url("/assets/europa-oma.png");
+    background-position: center;
+
+}
+
+#europa-keuze-opa{
+    background: url("/assets/europa-opa.png");
+    background-position: center;
+
+}
+
+.btn-wrapper-verhaal{
+
+
+    position: absolute;
+    bottom: 65px;
+    right: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.btn-wrapper-verhaal-opa{
+
+
+    position: absolute;
+    bottom: 65px;
+    left: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+.keuze-opa-oma-btn{
+
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+
+}
+
+button{
+
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+button:hover{
+    
+    background-color:#163247;
+    transition-duration: 0.2s;
+
+}
+
+#extra-infro-europa-opa{
+
+    background: url("/assets/europa-extrainfo-opa.png");
+    background-position: center;
+
+}
+
+#extra-infro-europa-oma{
+
+    background: url("/assets/europa-extrainfo-oma.png");
+    background-position: center;
+}
+
+.radio-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:40%;
+    bottom:30px;
+    transform: translate(-50%,-50%);
+}
+
+.radio{
+
+    width: 150px;
+    height: 120px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.hightlight-radio{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-radio-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-radio-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #europa-animatie{
+
+    background: url("/assets/europa-animatie.png");
+    background-position: center;
+  }
+
+  /* .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    overflow-x: hidden;
+    transition-duration: 0.2s;
+
+
+  } */
+
+#europa-audio{
+
+position: absolute;
+width: 400px;
+height: 50px;
+left: 940px;
+bottom: 465px;
+
+
+}
+
+
+
+
+/* EINDE EUROPESE UNIE STORYLINE */
+
+
+
+/* ruilverkaveling storyline */
+
+#ruilverkaveling-keuze{
+
+    background: url("/assets/keuze-opa-oma.png");
+    background-position: center;
+   
+    
+
+}
+
+#opa-oma-wrapper-ruilverkaveling{
+
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 350px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    
+
+
+}
+#opa-ruilverkaveling{
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+   
+}
+
+
+#oma-ruilverkaveling{
+
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+#oma-ruilverkaveling:hover{
+
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+    border-radius: 50px; 
+}
+
+
+#opa-ruilverkaveling:hover{
+
+    box-shadow: 0 0 91px rgba(255,255,255); 
+    border-radius: 50px; 
+}
+
+#ruilverkaveling-keuze-oma{
+    background: url("/assets/ruilverkaveling-oma.png");
+    background-position: center;
+
+}
+
+#ruilverkaveling-keuze-opa{
+    background: url("/assets/ruilverkaveling-opa.png");
+    background-position: center;
+
+}
+
+.btn-wrapper-verhaal{
+
+
+    position: absolute;
+    bottom: 65px;
+    right: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.btn-wrapper-verhaal-opa{
+
+
+    position: absolute;
+    bottom: 65px;
+    left: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+.keuze-opa-oma-btn{
+
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+
+}
+
+button{
+
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+button:hover{
+    
+    background-color:#163247;
+    transition-duration: 0.2s;
+
+}
+
+#extra-infro-ruilverkaveling-opa{
+
+    background: url("/assets/ruilverkaveling-extrainfo-opa.png");
+    background-position: center;
+
+}
+
+#extra-infro-ruilverkaveling-oma{
+
+    background: url("/assets/ruilverkaveling-extrainfo-oma.png");
+    background-position: center;
+}
+
+.krant-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:40%;
+    bottom:30px;
+    transform: translate(-50%,-50%);
+}
+
+.krant{
+
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.hightlight-krant{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-krant-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-krant-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #ruilverkaveling-animatie{
+
+    background: url("/assets/ruilverkaveling-animatie.png");
+    background-position: center;
+  }
+
+  /* .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    overflow-x: hidden;
+
+
+  } */
+
+  #krant-animatie{
+
+
+    width: 1200px;
+    object-fit: contain;
+  }
+
+  .container-scroll{
+
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    width: 70%;
+    padding: 0 0.25rem;
+    height: 1060px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    overflow-x: hidden;
+
+  }
+ 
+  /* EINDE RUILVERKAVELING STORYLINE */
+
+
+  /* EXPORT RECORD STORYLINE */
+
+
+
+  #exportrecord-keuze{
+
+    background: url("/assets/keuze-opa-oma.png");
+    background-position: center;
+   
+    
+
+}
+
+#opa-oma-wrapper-exportrecord{
+
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 350px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    
+
+
+}
+#opa-exportrecord{
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+   
+}
+
+
+#oma-exportrecord{
+
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+#oma-exportrecord:hover{
+
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+    border-radius: 50px; 
+}
+
+
+#opa-exportrecord:hover{
+
+    box-shadow: 0 0 91px rgba(255,255,255); 
+    border-radius: 50px; 
+}
+
+#exportrecord-keuze-oma{
+    background: url("/assets/exportrecord-oma.png");
+    background-position: center;
+
+}
+
+#exportrecord-keuze-opa{
+    background: url("/assets/exportrecord-opa.png");
+    background-position: center;
+
+}
+
+.btn-wrapper-verhaal{
+
+
+    position: absolute;
+    bottom: 65px;
+    right: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.btn-wrapper-verhaal-opa{
+
+
+    position: absolute;
+    bottom: 65px;
+    left: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+.keuze-opa-oma-btn{
+
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+
+}
+
+button{
+
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+button:hover{
+    
+    background-color:#163247;
+
+}
+
+#extra-infro-exportrecord-opa{
+
+    background: url("/assets/exportrecord-extrainfo-opa.png");
+    background-position: center;
+
+}
+
+#extra-infro-exportrecord-oma{
+
+    background: url("/assets/exportrecord-extrainfo-oma.png");
+    background-position: center;
+}
+
+.dagboek-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:40%;
+    bottom:30px;
+    transform: translate(-50%,-50%);
+}
+
+.dagboek-oma{
+
+    width: 150px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dagboek-opa{
+
+    width: 150px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+.hightlight-dagboek{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-dagboek-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-dagboek-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #exportrecord-animatie-oma-pg1{
+
+    background: url("/assets/dagboek-page1-oma.png");
+    background-position: center;
+  }
+
+  #exportrecord-animatie-oma-pg2{
+
+    background: url("/assets/dagboek-page2-oma.png");
+    background-position: center;
+  }
+
+
+
+  #exportrecord-animatie-opa-pg1{
+
+    background: url("/assets/dagboek-pg1-opa.png");
+    background-position: center;
+  }
+
+  #exportrecord-animatie-opa-pg2{
+
+    background: url("/assets/dagboek-page2-opa.png");
+    background-position: center;
+  }
+
+  .bladzijde-btn-opa{
+    width: 313px;
+    height:78px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 50px;
+    left: 50%;
+    align-items: center;
+    background-color:#2D6895;
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+    text-align: center;
+
+  }
+
+  .bladzijde-btn-oma{
+
+    width: 313px;
+    height:78px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 50px;
+    left: 50%;
+    align-items: center;
+    background-color:#2D6895;
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue';
+    text-align: center;
+
+  }
+
+
+
+  .bladzijde-btn-oma:hover{
+
+   background-color: #163247;
+
+
+  }
+
+  
+  .bladzijde-btn-opa:hover{
+
+    background-color: #163247;
+ 
+ 
+   }
+ 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    overflow-x: hidden;
+
+
+  } */
+
+
+  /* EINDE EXPORT RECORD STORYLINE */
+
+
+
+
+
+
+  /* EXPORT EXPORTSCHAAMTE STORYLINE */
+
+  #exportschaamte-keuze{
+
+    background: url("/assets/keuze-opa-oma.png");
+    background-position: center;
+   
+    
+
+}
+
+#opa-oma-wrapper-exportschaamte{
+
+    padding: 100px;
+    padding-bottom: 0px;
+    padding-top: 350px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    
+
+
+}
+#opa-exportschaamte{
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+   
+}
+
+
+#oma-exportschaamte{
+
+
+    width: 450px;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+#oma-exportschaamte:hover{
+
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+    border-radius: 50px; 
+}
+
+
+#opa-exportschaamte:hover{
+
+    box-shadow: 0 0 91px rgba(255,255,255); 
+    border-radius: 50px; 
+}
+
+#exportschaamte-keuze-oma{
+    background: url("/assets/exportschaamte-oma.png");
+    background-position: center;
+
+}
+
+#exportschaamte-keuze-opa{
+    background: url("/assets/exportschaamte-opa.png");
+    background-position: center;
+
+}
+
+.btn-wrapper-verhaal{
+
+
+    position: absolute;
+    bottom: 65px;
+    right: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.btn-wrapper-verhaal-opa{
+
+
+    position: absolute;
+    bottom: 65px;
+    left: 220px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+.keuze-opa-oma-btn{
+
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+
+}
+
+button{
+
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+button:hover{
+    
+    background-color:#163247;
+    transition-duration: 0.2s;
+
+}
+
+#extra-infro-exportschaamte-opa{
+
+    background: url("/assets/exportschaamte-extrainfo.png");
+    background-position: center;
+
+}
+
+#extra-infro-exportschaamte-oma{
+
+    background: url("/assets/exportschaamte-extrainfo.png");
+    background-position: center;
+}
+
+.tablet-wrap{
+
+
+
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    right:750px;
+    bottom:160px;
+    transform: translate(-50%,-50%);
+}
+
+.tablet{
+
+    width: 150px;
+    height: 30px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.hightlight-tablet{
+
+    width: 0px;
+    height: 0px;
+    border: 5px solid rgba(255, 136, 0, 0.8);
+    border-radius: 50%;
+    animation-name: hightlight-tablet-ani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+@keyframes hightlight-tablet-ani {
+    0%      {height:0px;width:0px;}
+    50%     {height:300px;width:300px;}
+    100%    {height:0px;width:0px;}
+   
+  }
+
+
+  #exportschaamte-animatie{
+
+    background: url("/assets/exportschaamte-animatie.png");
+    background-position: center;
+  }
+
+  /* .animatie-menu-btn{
+
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color:#2D6895 ;
+    color: white;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    overflow-x: hidden;
+
+
+  } */
+
+
+  #tablet-animatie{
+
+
+    width: 900px;
+    margin-left:215px;
+    margin-top: 90px;
+    object-fit: contain;
+  }
+
+ 
+  .container-scroll.exportschaamte{
+
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    width: 70%;
+    padding: 0 0.25rem;
+    height: 1060px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    overflow-x: hidden;
+
+  }
+
+
+  /* EINDE  EXPORTSCHAAMTE STORYLINE*/
